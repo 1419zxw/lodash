@@ -26,7 +26,6 @@ function _chunk(array, size = 1) {
     // 从记录的索引开始截取，到索引+size停止
     result[i] = array.slice(index, index += size)
   }
-  console.log('result', result)
   return result
 }
 
@@ -34,3 +33,5 @@ _chunk([1, 2, 3, 4, 5, 6, 7], 3)
 // => [[1, 2, 3], [4, 5, 6], [7]]
 _chunk([1, 2, 3, 4, 5, 6, 7], 2)
 // => [[1, 2], [3, 4] [5, 6], [7]]
+
+exports.chunk = _chunk
